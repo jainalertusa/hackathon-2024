@@ -1,0 +1,49 @@
+version: '1.0.0'
+
+x-common-variables: &common-variables
+  MYSQL_DATABASE: $MYSQL_DATABASE
+  MYSQL_USER: $MYSQL_USER
+  MYSQL_PASSWORD: $MYSQL_PASSWORD
+
+services:
+  api:
+    build:
+      context: ./api-server
+      target: dev
+    image: jainalertsummer2024/api:<YOUR_GROUP_ID>_<NAME>
+    volumes:
+      - ./api-server:/src
+      - /src/node_modules
+    command: npm run start:dev
+    ports:
+      - $API_PORT:$API_PORT
+    environment:
+      <<: *common-variables
+      PORT: $API_PORT
+      NODE_ENV: development
+
+  ui:
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      context: ./blog-ui
+    image: jainalertsummer2024/blog-ui:<YOUR_GROUP_ID>_<NAME>
+    volumes:
+      - ./blog-ui:/src
+      - /src/node_modules
+    ports:
+      - $CLIENT_PORT:$CLIENT_PORT
+
+  adminer:
+    image: jainalertsummer2024/adminer:<YOUR_GROUP_ID>_<NAME>
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+
+volumes:
+  mysql_data:
