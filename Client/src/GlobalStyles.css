@@ -1,0 +1,9 @@
+/* src/GlobalStyles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure the body extends to at least the height of the viewport */
+    display: flex;
+    flex-direction: column;
+  }
+  

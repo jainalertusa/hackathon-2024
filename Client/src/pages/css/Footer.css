@@ -1,0 +1,36 @@
+/* src/components/Footer.css */
+.footer {
+    width: 100%;
+    background: rgba(84, 110, 81, 0.8); /* Hunter Green with opacity */
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-links li {
+    margin-right: 20px;
+  }
+  
+  .footer-links li a {
+    color: #f7f3e9; /* Cream */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links li a:hover {
+    color: #e5a85b; /* Gold */
+  }
+  

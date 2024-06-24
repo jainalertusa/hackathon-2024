@@ -1,0 +1,50 @@
+version: '1.0.0'
+
+services:
+  backend:
+    build: ../../BackEnd_RE1932
+    image: jainalertsummer2024/api:1932_vishesh
+    depends_on:
+      - mysql
+    ports:
+      - "5001:5001"
+    environment:
+      FLASK_APP: Endpoints/rest_controller.py
+      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_RUN_PORT: 5001
+    networks:
+      - dpm
+
+  frontend:
+    build: ../../Client
+    image: jainalertsummer2024/api:1932_vishesh
+    ports:
+      - "80:80"
+    networks:
+      - dpm
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "32001:3306"
+    volumes:
+      - ../../BackEnd_Re1932/database/data.sql:/docker-entrypoint-initdb.d/data.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: RE1932
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    networks:
+      - dpm
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - dpm
+    depends_on:
+      - mysql
+
+networks:
+  dpm:

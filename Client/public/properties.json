@@ -1,0 +1,569 @@
+[
+  {
+    "id": "1",
+    "title": "Beautiful Family House",
+    "description": "A beautiful family house in a great neighborhood.",
+    "price": "$500,000",
+    "location": "San Francisco, CA",
+    "image": "./assets/homes/1.jpeg",
+    "features": ["4 bedrooms", "3 bathrooms", "2 car garage"]
+  },
+  {
+    "id": "2",
+    "title": "Cozy Suburban Home",
+    "description": "Cozy home in a quiet suburban area with a spacious backyard.",
+    "price": "$380,000",
+    "location": "Chicago, IL",
+    "image": "./assets/homes/2.webp",
+    "features": ["3 bedrooms", "2.5 bathrooms", "Finished basement"]
+  },
+  {
+    "id": "3",
+    "title": "Modern City Apartment",
+    "description": "Modern apartment in the heart of downtown, close to amenities.",
+    "price": "$650,000",
+    "location": "New York, NY",
+    "image": "./assets/homes/3.webp",
+    "features": ["2 bedrooms", "2 bathrooms", "City views"]
+  },
+  {
+    "id": "4",
+    "title": "Spacious Villa",
+    "description": "Luxurious villa with panoramic views of the ocean.",
+    "price": "$2,200,000",
+    "location": "Malibu, CA",
+    "image": "./assets/homes/4.webp",
+    "features": ["5 bedrooms", "5.5 bathrooms", "Infinity pool"]
+  },
+  {
+    "id": "5",
+    "title": "Country Ranch",
+    "description": "Rustic ranch nestled in the countryside with acres of land.",
+    "price": "$780,000",
+    "location": "Austin, TX",
+    "image": "./assets/homes/5.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Barn and stables"]
+  },
+  {
+    "id": "6",
+    "title": "Seaside Cottage",
+    "description": "Charming cottage steps away from the beach with ocean views.",
+    "price": "$420,000",
+    "location": "Santa Monica, CA",
+    "image": "./assets/homes/6.webp",
+    "features": ["2 bedrooms", "1 bathroom", "Deck with ocean view"]
+  },
+  {
+    "id": "7",
+    "title": "Historic Townhouse",
+    "description": "Elegant townhouse in a historic district with original features.",
+    "price": "$1,150,000",
+    "location": "Boston, MA",
+    "image": "./assets/homes/7.webp",
+    "features": ["4 bedrooms", "3.5 bathrooms", "Period details"]
+  },
+  {
+    "id": "8",
+    "title": "Mountain Retreat",
+    "description": "Serenely located mountain retreat surrounded by nature trails.",
+    "price": "$590,000",
+    "location": "Denver, CO",
+    "image": "./assets/homes/8.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Wrap-around deck"]
+  },
+  {
+    "id": "9",
+    "title": "Urban Penthouse",
+    "description": "Luxury penthouse with panoramic city views and modern amenities.",
+    "price": "$1,850,000",
+    "location": "San Francisco, CA",
+    "image": "./assets/homes/9.webp",
+    "features": ["3 bedrooms", "3.5 bathrooms", "Floor-to-ceiling windows"]
+  },
+  {
+    "id": "10",
+    "title": "Lakefront Property",
+    "description": "Exclusive lakefront property with private dock and boathouse.",
+    "price": "$1,750,000",
+    "location": "Seattle, WA",
+    "image": "./assets/homes/10.webp",
+    "features": ["4 bedrooms", "4 bathrooms", "Boat dock"]
+  },
+  {
+    "id": "11",
+    "title": "Family Retreat",
+    "description": "Family-friendly retreat with a large backyard and play area.",
+    "price": "$460,000",
+    "location": "Phoenix, AZ",
+    "image": "./assets/homes/11.webp",
+    "features": ["3 bedrooms", "2.5 bathrooms", "Spacious yard"]
+  },
+  {
+    "id": "12",
+    "title": "Ocean View Villa",
+    "description": "Luxurious villa overlooking the ocean with infinity pool.",
+    "price": "$3,500,000",
+    "location": "Miami, FL",
+    "image": "./assets/homes/12.webp",
+    "features": ["6 bedrooms", "6.5 bathrooms", "Infinity pool"]
+  },
+  {
+    "id": "13",
+    "title": "Modern Loft",
+    "description": "Contemporary loft in a bustling city center with open floor plan.",
+    "price": "$980,000",
+    "location": "Chicago, IL",
+    "image": "./assets/homes/1.jpeg",
+    "features": ["2 bedrooms", "2 bathrooms", "Exposed brick walls"]
+  },
+  {
+    "id": "14",
+    "title": "Countryside Farmhouse",
+    "description": "Quaint farmhouse in a picturesque countryside setting.",
+    "price": "$540,000",
+    "location": "Nashville, TN",
+    "image":"./assets/homes/2.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Wrap-around porch"]
+  },
+  {
+    "id": "15",
+    "title": "Ski Chalet",
+    "description": "Charming chalet with ski-in/ski-out access.",
+    "price": "$980,000",
+    "location": "Aspen, CO",
+    "image": "./assets/homes/3.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Hot tub"]
+  },
+  {
+    "id": "16",
+    "title": "Luxury Beachfront Condo",
+    "description": "Luxury condo with breathtaking beachfront views.",
+    "price": "$1,200,000",
+    "location": "Santa Barbara, CA",
+    "image": "./assets/homes/4.webp",
+    "features": ["3 bedrooms", "3 bathrooms", "Direct beach access"]
+  },
+  {
+    "id": "17",
+    "title": "Rustic Cabin",
+    "description": "Cozy cabin nestled in the woods with a fireplace and scenic views.",
+    "price": "$320,000",
+    "location": "Tahoe City, CA",
+    "image": "./assets/homes/5.webp",
+    "features": ["2 bedrooms", "1 bathroom", "Fireplace"]
+  },
+  {
+    "id": "18",
+    "title": "Urban Studio Apartment",
+    "description": "Compact studio apartment in a vibrant urban neighborhood.",
+    "price": "$250,000",
+    "location": "Los Angeles, CA",
+    "image":"./assets/homes/6.webp",
+    "features": ["Studio", "1 bathroom", "City views"]
+  },
+  {
+    "id": "19",
+    "title": "Elegant Townhome",
+    "description": "Elegant townhome with modern interiors and private garden.",
+    "price": "$1,050,000",
+    "location": "Portland, OR",
+    "image": "./assets/homes/7.webp",
+    "features": ["3 bedrooms", "2.5 bathrooms", "Private garden"]
+  },
+  {
+    "id": "20",
+    "title": "Lakefront Retreat",
+    "description": "Serenely located retreat with stunning lake views.",
+    "price": "$890,000",
+    "location": "Lake Tahoe, CA",
+    "image": "./assets/homes/8.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Lake views"]
+  },
+  {
+    "id": "21",
+    "title": "Historic Mansion",
+    "description": "Magnificent historic mansion with grand architecture and lush gardens.",
+    "price": "$4,500,000",
+    "location": "Charleston, SC",
+    "image": "./assets/homes/9.webp",
+    "features": ["8 bedrooms", "7 bathrooms", "Formal gardens"]
+  },
+  {
+    "id": "22",
+    "title": "Urban Duplex",
+    "description": "Modern duplex in a trendy urban neighborhood.",
+    "price": "$1,800,000",
+    "location": "Brooklyn, NY",
+    "image": "./assets/homes/10.webp",
+    "features": ["4 bedrooms", "3.5 bathrooms", "Private rooftop terrace"]
+  },
+  {
+    "id": "23",
+    "title": "Mountain View Retreat",
+    "description": "Tranquil retreat with stunning mountain views.",
+    "price": "$740,000",
+    "location": "Boulder, CO",
+    "image": "./assets/homes/11.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Mountain views"]
+  },
+  {
+    "id": "24",
+    "title": "Beachfront Bungalow",
+    "description": "Charming bungalow steps away from the beach.",
+    "price": "$580,000",
+    "location": "San Diego, CA",
+    "image": "./assets/homes/12.webp",
+    "features": ["2 bedrooms", "1 bathroom", "Beach views"]
+  },
+  {
+    "id": "25",
+    "title": "Rural Retreat",
+    "description": "Peaceful retreat in the countryside with acres of land.",
+    "price": "$680,000",
+    "location": "Sedona, AZ",
+    "image": "./assets/homes/1.jpeg",
+    "features": ["4 bedrooms", "3 bathrooms", "Acres of land"]
+  },
+  {
+    "id": "26",
+    "title": "Historic Brownstone",
+    "description": "Classic brownstone with modern updates.",
+    "price": "$1,180,000",
+    "location": "Philadelphia, PA",
+    "image": "./assets/homes/2.webp",
+    "features": ["5 bedrooms", "4 bathrooms", "Original details"]
+  },
+  {
+    "id": "27",
+    "title": "Mountain Cabin",
+    "description": "Cozy cabin nestled in the mountains with scenic views.",
+    "price": "$380,000",
+    "location": "Jackson Hole, WY",
+    "image": "./assets/homes/3.webp",
+    "features": ["2 bedrooms", "1 bathroom", "Mountain views"]
+  },
+  {
+    "id": "28",
+    "title": "Beachfront Estate",
+    "description": "Luxurious estate with panoramic beachfront views.",
+    "price": "$5,200,000",
+    "location": "Martha's Vineyard, MA",
+    "image": "./assets/homes/4.webp",
+    "features": ["6 bedrooms", "6 bathrooms", "Private beach access"]
+  },
+  {
+    "id": "29",
+    "title": "Country Farmhouse",
+    "description": "Charming farmhouse with acres of farmland and a barn.",
+    "price": "$730,000",
+    "location": "Lexington, KY",
+    "image": "./assets/homes/5.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Barn and farmland"]
+  },
+  {
+    "id": "30",
+    "title": "Lakefront Cottage",
+    "description": "Quaint cottage with stunning lakefront views.",
+    "price": "$950,000",
+    "location": "Lake Placid, NY",
+    "image": "./assets/homes/6.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Lakefront views"]
+  },
+  {
+    "id": "31",
+    "title": "City Penthouse",
+    "description": "Luxury penthouse in the heart of the city with expansive views.",
+    "price": "$3,200,000",
+    "location": "Manhattan, NY",
+    "image": "./assets/homes/7.webp",
+    "features": ["4 bedrooms", "4.5 bathrooms", "Floor-to-ceiling windows"]
+  },
+  {
+    "id": "32",
+    "title": "Countryside Estate",
+    "description": "Sprawling estate in a peaceful countryside setting.",
+    "price": "$2,900,000",
+    "location": "Sonoma, CA",
+    "image": "./assets/homes/8.webp",
+    "features": ["6 bedrooms", "5 bathrooms", "Acres of land"]
+  },
+  {
+    "id": "33",
+    "title": "Urban Townhome",
+    "description": "Modern townhome in a vibrant urban neighborhood.",
+    "price": "$1,080,000",
+    "location": "Seattle, WA",
+    "image": "./assets/homes/9.webp",
+    "features": ["3 bedrooms", "3.5 bathrooms", "Private rooftop deck"]
+  },
+  {
+    "id": "34",
+    "title": "Lake House",
+    "description": "Stunning lake house with panoramic views.",
+    "price": "$1,550,000",
+    "location": "Lake Tahoe, CA",
+    "image":"./assets/homes/10.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Private dock"]
+  },
+  {
+    "id": "35",
+    "title": "Luxury Apartment",
+    "description": "Luxury apartment with modern amenities and city skyline views.",
+    "price": "$1,700,000",
+    "location": "San Francisco, CA",
+    "image": "./assets/homes/11.webp",
+    "features": ["3 bedrooms", "3 bathrooms", "City views"]
+  },
+  {
+    "id": "36",
+    "title": "Ranch Retreat",
+    "description": "Ranch-style retreat with expansive views of the countryside.",
+    "price": "$890,000",
+    "location": "Jackson, WY",
+    "image": "./assets/homes/12.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Acres of land"]
+  },
+  {
+    "id": "37",
+    "title": "Beachside Villa",
+    "description": "Luxurious villa with private beach access and stunning views.",
+    "price": "$4,300,000",
+    "location": "Key West, FL",
+    "image":"./assets/homes/1.jpeg",
+    "features": ["5 bedrooms", "5.5 bathrooms", "Private beach access"]
+  },
+  {
+    "id": "38",
+    "title": "Urban Loft",
+    "description": "Chic loft with industrial charm and city views.",
+    "price": "$820,000",
+    "location": "Portland, OR",
+    "image": "./assets/homes/2.webp",
+    "features": ["2 bedrooms", "2 bathrooms", "Exposed brick walls"]
+  },
+  {
+    "id": "39",
+    "title": "Seaside Retreat",
+    "description": "Serene retreat steps away from the beach with ocean views.",
+    "price": "$1,280,000",
+    "location": "Malibu, CA",
+    "image": "./assets/homes/3.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Ocean views"]
+  },
+  {
+    "id": "40",
+    "title": "Historic Cottage",
+    "description": "Quaint cottage with historic charm and modern updates.",
+    "price": "$680,000",
+    "location": "Charleston, SC",
+    "image": "./assets/homes/4.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Historic details"]
+  },
+  {
+    "id": "41",
+    "title": "Mountain Chalet",
+    "description": "Cozy chalet nestled in the mountains with ski-in/ski-out access.",
+    "price": "$1,300,000",
+    "location": "Lake Tahoe, CA",
+    "image": "./assets/homes/5.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Ski-in/ski-out access"]
+  },
+  {
+    "id": "42",
+    "title": "Elegant Brownstone",
+    "description": "Elegant brownstone with classic architecture and modern interiors.",
+    "price": "$1,450,000",
+    "location": "Brooklyn, NY",
+    "image": "./assets/homes/6.webp",
+    "features": ["5 bedrooms", "4 bathrooms", "High ceilings"]
+  },
+  {
+    "id": "43",
+    "title": "Urban Condo",
+    "description": "Modern condo in a vibrant urban neighborhood with city views.",
+    "price": "$980,000",
+    "location": "Los Angeles, CA",
+    "image":"./assets/homes/7.webp",
+    "features": ["2 bedrooms", "2 bathrooms", "City views"]
+  },
+  {
+    "id": "44",
+    "title": "Country Manor",
+    "description": "Majestic manor in a tranquil countryside setting.",
+    "price": "$3,800,000",
+    "location": "Lexington, KY",
+    "image": "./assets/homes/8.webp",
+    "features": ["7 bedrooms", "6 bathrooms", "Manicured gardens"]
+  },
+  {
+    "id": "45",
+    "title": "Beachfront Cabin",
+    "description": "Charming cabin with direct beach access and panoramic views.",
+    "price": "$480,000",
+    "location": "Santa Cruz, CA",
+    "image": "./assets/homes/9.webp",
+    "features": ["2 bedrooms", "1 bathroom", "Beachfront views"]
+  },
+  {
+    "id": "46",
+    "title": "Modern Townhouse",
+    "description": "Sleek townhouse with modern design and rooftop terrace.",
+    "price": "$1,200,000",
+    "location": "Miami, FL",
+    "image": "./assets/homes/10.webp",
+    "features": ["3 bedrooms", "3.5 bathrooms", "Rooftop terrace"]
+  },
+  {
+    "id": "47",
+    "title": "Riverfront Property",
+    "description": "Picturesque property with riverfront views and boat dock.",
+    "price": "$1,680,000",
+    "location": "Austin, TX",
+    "image":"./assets/homes/11.webp",
+    "features": ["4 bedrooms", "4 bathrooms", "Riverfront views"]
+  },
+  {
+    "id": "48",
+    "title": "Ski Lodge",
+    "description": "Charming lodge with cozy interiors and stunning mountain views.",
+    "price": "$1,150,000",
+    "location": "Jackson Hole, WY",
+    "image": "./assets/homes/12.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Mountain views"]
+  },
+  {
+    "id": "49",
+    "title": "City Townhome",
+    "description": "Contemporary townhome in a bustling city center.",
+    "price": "$890,000",
+    "location": "Seattle, WA",
+    "image": "./assets/homes/1.jpeg",
+    "features": ["3 bedrooms", "3 bathrooms", "City views"]
+  },
+  {
+    "id": "50",
+    "title": "Mountain Retreat",
+    "description": "Peaceful retreat nestled in the mountains with expansive views.",
+    "price": "$1,250,000",
+    "location": "Lake Tahoe, CA",
+    "image": "./assets/homes/2.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Mountain views"]
+  },
+  {
+    "id": "51",
+    "title": "Beachfront Residence",
+    "description": "Luxurious beachfront residence with private access to the beach.",
+    "price": "$5,500,000",
+    "location": "Malibu, CA",
+    "image": "./assets/homes/3.webp",
+    "features": ["5 bedrooms", "6 bathrooms", "Private beach access"]
+  },
+  {
+    "id": "52",
+    "title": "Country Cottage",
+    "description": "Quaint cottage surrounded by rolling hills and lush gardens.",
+    "price": "$580,000",
+    "location": "Charlottesville, VA",
+    "image": "./assets/homes/4.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Gardens"]
+  },
+  {
+    "id": "53",
+    "title": "Urban Oasis",
+    "description": "Modern oasis in a bustling city center with lush greenery.",
+    "price": "$1,380,000",
+    "location": "San Francisco, CA",
+    "image": "./assets/homes/5.webp",
+    "features": ["4 bedrooms", "3 bathrooms", "Private garden"]
+  },
+  {
+    "id": "54",
+    "title": "Historic Estate",
+    "description": "Historic estate with grand architecture and sprawling grounds.",
+    "price": "$4,800,000",
+    "location": "Boston, MA",
+    "image": "./assets/homes/6.webp",
+    "features": ["7 bedrooms", "6 bathrooms", "Manicured grounds"]
+  },
+  {
+    "id": "55",
+    "title": "Lakeview Retreat",
+    "description": "Tranquil retreat with stunning lake views and private dock.",
+    "price": "$1,750,000",
+    "location": "Lake Tahoe, CA",
+    "image": "./assets/homes/7.webp",
+    "features": ["5 bedrooms", "4 bathrooms", "Lake views"]
+  },
+  {
+    "id": "56",
+    "title": "Modern Farmhouse",
+    "description": "Contemporary farmhouse with open floor plan and rural views.",
+    "price": "$920,000",
+    "location": "Portland, OR",
+    "image": "./assets/homes/8.webp",
+    "features": ["3 bedrooms", "2.5 bathrooms", "Open floor plan"]
+  },
+  {
+    "id": "57",
+    "title": "City View Penthouse",
+    "description": "Luxury penthouse with breathtaking city views and rooftop terrace.",
+    "price": "$3,600,000",
+    "location": "Seattle, WA",
+    "image": "./assets/homes/9.webp",
+    "features": ["4 bedrooms", "4.5 bathrooms", "Rooftop terrace"]
+  },
+  {
+    "id": "58",
+    "title": "Lakefront Mansion",
+    "description": "Magnificent mansion with panoramic views of the lake and gardens.",
+    "price": "$6,200,000",
+    "location": "Lake Geneva, WI",
+    "image": "./assets/homes/10.webp",
+    "features": ["6 bedrooms", "7 bathrooms", "Lakeside gardens"]
+  },
+  {
+    "id": "59",
+    "title": "Rural Cabin",
+    "description": "Charming cabin in a secluded rural setting with mountain views.",
+    "price": "$420,000",
+    "location": "Bozeman, MT",
+    "image":"./assets/homes/11.webp",
+    "features": ["2 bedrooms", "1 bathroom", "Mountain views"]
+  },
+  {
+    "id": "60",
+    "title": "Beach House",
+    "description": "Sleek beach house with modern design and oceanfront views.",
+    "price": "$1,890,000",
+    "location": "Santa Monica, CA",
+    "image": "./assets/homes/12.webp",
+    "features": ["3 bedrooms", "3 bathrooms", "Oceanfront views"]
+  },
+  {
+    "id": "61",
+    "title": "Urban Townhouse",
+    "description": "Chic townhouse in a vibrant urban neighborhood.",
+    "price": "$1,100,000",
+    "location": "Boston, MA",
+    "image": "./assets/homes/1.jpeg",
+    "features": ["3 bedrooms", "3 bathrooms", "Private rooftop deck"]
+  },
+  {
+    "id": "62",
+    "title": "Mountain Lodge",
+    "description": "Cozy lodge nestled in the mountains with rustic charm.",
+    "price": "$680,000",
+    "location": "Breckenridge, CO",
+    "image": "./assets/homes/2.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Mountain views"]
+  },
+  {
+    "id": "63",
+    "title": "Beachfront Retreat",
+    "description": "Cozy lodge nestled in the mountains with rustic charm.",
+    "price": "$680,000",
+    "location": "Breckenridge, CO",
+    "image": "./assets/homes/3.webp",
+    "features": ["3 bedrooms", "2 bathrooms", "Mountain views"]
+  }
+]

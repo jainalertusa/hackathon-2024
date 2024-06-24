@@ -1,49 +1,50 @@
 version: '1.0.0'
 
-x-common-variables: &common-variables
-  MYSQL_DATABASE: $MYSQL_DATABASE
-  MYSQL_USER: $MYSQL_USER
-  MYSQL_PASSWORD: $MYSQL_PASSWORD
-
 services:
-  api:
-    build:
-      context: ./api-server
-      target: dev
-    image: jainalertsummer2024/api:<YOUR_GROUP_ID>_<NAME>
-    volumes:
-      - ./api-server:/src
-      - /src/node_modules
-    command: npm run start:dev
+  backend:
+    build: ./BackEnd_RE1932
+    image: jainalertsummer2024/api:1932_vishesh
+    depends_on:
+      - mysql
     ports:
-      - $API_PORT:$API_PORT
+      - "5001:5001"
     environment:
-      <<: *common-variables
-      PORT: $API_PORT
-      NODE_ENV: development
+      FLASK_APP: Endpoints/rest_controller.py
+      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_RUN_PORT: 5001
+    networks:
+      - dpm
 
-  ui:
-    stdin_open: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    build:
-      context: ./blog-ui
-    image: jainalertsummer2024/blog-ui:<YOUR_GROUP_ID>_<NAME>
-    volumes:
-      - ./blog-ui:/src
-      - /src/node_modules
+  frontend:
+    build: ./Client
+    image: jainalertsummer2024/api:1932_vishesh
     ports:
-      - $CLIENT_PORT:$CLIENT_PORT
+      - "80:80"
+    networks:
+      - dpm
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "32001:3306"
+    volumes:
+      - ./BackEnd_Re1932/database/data.sql:/docker-entrypoint-initdb.d/data.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: RE1932
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    networks:
+      - dpm
 
   adminer:
-    image: jainalertsummer2024/adminer:<YOUR_GROUP_ID>_<NAME>
-    restart: unless-stopped
+    image: adminer
     ports:
-      - 8080:8080
+      - "8080:8080"
+    networks:
+      - dpm
     depends_on:
-      - db
-    environment:
-      ADMINER_DEFAULT_SERVER: db
+      - mysql
 
-volumes:
-  mysql_data:
+networks:
+  dpm:

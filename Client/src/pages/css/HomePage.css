@@ -1,0 +1,129 @@
+/* src/pages/HomePage.css */
+.hero-section {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(106, 128, 105, 0.4); /* Olive Green */
+}
+
+.hero-section-left{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  letter-spacing: 1rem;
+}
+.hero-section-left-content-wrapper {
+  padding: 0px 30px;
+}
+.hero-section-right{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section-left-content-wrapper h2 {
+  font-size: 6rem;
+  margin: 0px;
+  padding: 0px;
+  color: #2c5f2d; /* Hunter Green */
+}
+
+.hero-section-left-content-wrapper p {
+  font-size: 2rem;
+  color: #8c6a43; /* Brown */
+}
+.hero-section-image {
+  width:100%;
+  height: 100%;
+  float: right
+}
+
+.cta-button {
+  font-size: large;
+  color: #fff;
+  text-decoration: none;
+  background: #2c5f2d; /* Hunter Green */
+  border-radius: 10px;
+  width: fit-content;
+  padding: 20px;
+  letter-spacing: normal;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #4b8b3b; /* Lighter shade of Hunter Green */
+}
+
+.house-price-graph-feature-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(106, 128, 105, 0.4); /* Olive Green */
+}
+.house-price-graph-feature-section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.house-price-graph-feature-section-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.house-price-graph-feature-section-right h2 {
+  font-size: 3rem;
+  margin: 0px;
+  padding: 0px;
+  color: #2c5f2d; /* Hunter Green */
+}
+
+.house-price-graph-feature-section-right p {
+  font-size: 1rem;
+  color: #8c6a43; /* Brown */
+}
+
+#state-select {
+  padding: 10px 35px 10px 15px; /* Adjust padding as needed */
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: rgba(106, 128, 105, 0.4); /* Olive Green */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  appearance: none; /* Remove default appearance */
+  outline: none;
+  cursor: pointer; /* Show pointer cursor on hover */
+  position: relative; /* Ensure positioning context for dropdown */
+}
+
+#state-select::after {
+  content: '\25BC'; /* Unicode character for downward arrow */
+  position: absolute;
+  top: calc(50% - 0.5em); /* Vertically center arrow */
+  right: 10px; /* Adjust as needed */
+  font-size: 1.2em;
+  pointer-events: none; /* Ensure the arrow doesn't interfere with select */
+}
+
+.featured-properties-card-carousel-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(106, 128, 105, 0.4); /* Olive Green */
+  padding:  20px 0px;
+}
+.featured-properties-card-carousel-section-top h2 {
+  font-size: 3rem;
+  margin: 0px;
+  padding: 0px;
+  color: #2c5f2d; /* Hunter Green */
+  text-align: center;
+}
