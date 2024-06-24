@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: monil
+      POSTGRES_PASSWORD: Passwordmonil@07
+      POSTGRES_DB: realestate_scraper
+    ports:
+      - "5432:5432"
+  web:
+    image: <YOUR_GROUP_ID>/web:<YOUR_NAME>
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  etl:
+    image: <YOUR_GROUP_ID>/etl:<YOUR_NAME>
+    depends_on:
+      - db
