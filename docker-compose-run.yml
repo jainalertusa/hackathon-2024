@@ -1,82 +1,50 @@
 version: '1.0.0'
 
-x-common-variables: &common-variables
-  MYSQL_DATABASE: $MYSQL_DATABASE
-  MYSQL_USER: $MYSQL_USER
-  MYSQL_PASSWORD: $MYSQL_PASSWORD
-
 services:
-  db:
-    # This image is not custom and can be found on docker hub so don't need to push
-    image: mysql
-    restart: always
-    cap_add:
-      - SYS_NICE
-    volumes:
-      - mysql_data:/var/lib/mysql
-      - ./api-server/db-setup.sql:/docker-entrypoint-initdb.d/setup.sql
-    ports:
-      - "9906:3306"
-    environment:
-      <<: *common-variables
-      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-      MYSQL_HOST: $MYSQL_HOST
-
-  nginx:
-    # This image is not custom and can be found on docker hub so don't need to push
+  backend:
+    build: ./BackEnd_RE1932
+    image: jainalertsummer2024/api:1932_vishesh
     depends_on:
-      - api
-      - ui
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
+      - mysql
     ports:
-      - "8008:80"
+      - "5001:5001"
+    environment:
+      FLASK_APP: Endpoints/rest_controller.py
+      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_RUN_PORT: 5001
+    networks:
+      - dpm
 
-  api:
-    build:
-      context: ./api-server
-      target: dev
-    image: jainalertsummer2024/api:5400_jainalert
-    #image: jainalertsummer2024/<YOUR_PROJECT>:<YOUR_GROUP_ID>_<NAME>
-    depends_on:
-      - db
-    volumes:
-      - ./api-server:/src
-      - /src/node_modules
-    command: npm run start:dev
+  frontend:
+    build: ./Client
+    image: jainalertsummer2024/api:1932_vishesh
     ports:
-      - $API_PORT:$API_PORT
-    environment:
-      <<: *common-variables
-      PORT: $API_PORT
-      NODE_ENV: development
-  
-  ui:
-    stdin_open: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    build:
-      context: ./blog-ui
-    image: jainalertsummer2024/blog-ui:5400_jainalert
-    #image: jainalertsummer2024/<YOUR_PROJECT>:<YOUR_GROUP_ID>_<NAME>
-    volumes:
-      - ./blog-ui:/src
-      - /src/node_modules
+      - "80:80"
+    networks:
+      - dpm
+
+  mysql:
+    image: mysql:8.0
     ports:
-      - $CLIENT_PORT:$CLIENT_PORT
-  
+      - "32001:3306"
+    volumes:
+      - ./BackEnd_Re1932/database/data.sql:/docker-entrypoint-initdb.d/data.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: RE1932
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    networks:
+      - dpm
+
   adminer:
-    image: jainalertsummer2024/adminer:5400_jainalert
-    #image: jainalertsummer2024/<YOUR_PROJECT>:<YOUR_GROUP_ID>_<NAME>
-    restart: unless-stopped
+    image: adminer
     ports:
-      - 8080:8080
+      - "8080:8080"
+    networks:
+      - dpm
     depends_on:
-      - db
-    environment:
-      ADMINER_DEFAULT_SERVER: db
+      - mysql
 
-volumes:
-  mysql_data:
+networks:
+  dpm:

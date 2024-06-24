@@ -1,0 +1,36 @@
+.carousel-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .property-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .property-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .property-info {
+    padding: 10px;
+  }
+  
+  .property-info h3 {
+    color: #2c5f2d; /* Hunter Green */
+  }
+  
+  .property-info p {
+    color: #8c6a43; /* Brown */
+    font-size: 18px;
+  }
+  

@@ -1,0 +1,43 @@
+/* src/components/Header.css */
+.header {
+    width: 100%;
+    background: rgba(84, 110, 81, 0.8); /* Hunter Green with opacity */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: #f7f3e9; /* Cream */
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .navigation ul li {
+    margin-right: 20px;
+  }
+  
+  .navigation ul li a {
+    color: #f7f3e9; /* Cream */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navigation ul li a:hover {
+    color: #e5a85b; /* Gold */
+  }
+  

@@ -1,0 +1,46 @@
+/* src/components/PropertyCard.css */
+.property-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(242, 234, 221, 0.4); /* Cream */
+  }
+  
+  .property-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .property-info {
+    padding: 10px;
+  }
+  
+  .property-info h2 {
+    color: #2c5f2d; /* Hunter Green */
+  }
+  
+  .property-info p {
+    color: #8c6a43; /* Brown */
+  }
+  
+  .details-link {
+    color: #fff;
+    text-decoration: none;
+    background: #e07b39; /* Terracotta */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .details-link:hover {
+    background: #e5a85b; /* Gold */
+  }
+  
