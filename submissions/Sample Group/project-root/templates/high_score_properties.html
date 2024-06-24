@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% block title %}High Score Properties{% endblock %}
+
+{% block content %}
+    <h1>High Score Properties</h1>
+
+    <form method="GET" action="/high_score_properties">
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city" value="{{ city }}">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" name="state" value="{{ state }}">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="zip_code">Zip Code</label>
+                <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{ zip_code }}">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price" name="price" value="{{ price }}">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="beds">Beds</label>
+                <input type="text" class="form-control" id="beds" name="beds" value="{{ beds }}">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="baths">Baths</label>
+                <input type="text" class="form-control" id="baths" name="baths" value="{{ baths }}">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="sqft">Sqft</label>
+                <input type="text" class="form-control" id="sqft" name="sqft" value="{{ sqft }}">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Full Address</th>
+                <th scope="col">Price</th>
+                <th scope="col">Seller</th>
+                <th scope="col">Beds</th>
+                <th scope="col">Baths</th>
+                <th scope="col">Sqft</th>
+                <th scope="col">Score</th>
+                <th scope="col">PPSF</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row.full_address }}</td>
+                <td>{{ row.price }}</td>
+                <td>{{ row.seller }}</td>
+                <td>{{ row.beds }}</td>
+                <td>{{ row.baths }}</td>
+                <td>{{ row.sqft }}</td>
+                <td>{{ row.score }}</td>
+                <td>{{ row.ppsf }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

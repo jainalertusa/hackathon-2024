@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Scrape Page{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Scrape Page</h1>
+    <form id="scrapeForm" action="/start_scraping" method="POST">
+        <button type="submit" class="btn btn-primary">Start Scraping</button>
+    </form>
+    <div id="scrapeStatus"></div>
+</div>
+
+<script>
+    document.getElementById('scrapeForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        fetch('/start_scraping', {
+            method: 'POST',
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('scrapeStatus').innerHTML = `<p>${data.status}</p>`;
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+{% endblock %}
