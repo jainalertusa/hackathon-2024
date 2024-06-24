@@ -1,80 +1,60 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import './App.css';
-
-const Post = ({ post }) => {
-  return (
-    <article className="post">
-      <h2>{post.title}</h2>
-      <p>{post.body}</p>
-    </article>
-  )
-}
-
-const CreatePost = ({ onPost }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    axios
-      .post('/api/posts', {
-        title: e.target.title.value,
-        body: e.target.body.value
-      })
-      .then(() => {
-        onPost();
-        e.target.reset();
-      });
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-input">
-        <label htmlFor="title">Title:</label>
-        <input type="text" id="title" name="title" />
-      </div>
-      <div className="form-input">
-        <label htmlFor="body">Text:</label>
-        <textarea id="body" name="body" />
-      </div>
-      <div>
-        <button type="submit">Create New Post</button>
-      </div>
-    </form>
-  )
-}
+import React, { useState, Suspense } from "react";
+// import axios from "axios";
+import "./App.css";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import EconomicHistory from "./components/EconomicHistory";
+const EconomicHistory = React.lazy(
+  () => import("./components/EconomicHistory"),
+);
+const PropertyMarketHistory = React.lazy(
+  () => import("./components/PropertyMarketHistory"),
+);
+const ResidentialInvestment = React.lazy(
+  () => import("./components/ResidentialInvestment"),
+);
 
 const App = () => {
-  const [posts, setPosts] = useState([]);
-
-  const fetchPosts = () => {
-    axios
-      .get('/api/posts')
-      .then(res => {
-        setPosts(res.data);
-      });
-  }
-
-  useEffect(() => {
-    fetchPosts();
-  }, [])
-
+  const [comp, setComp] = useState(null);
+  const renderComponent = () => {
+    switch (comp) {
+      case "EconomicHistory":
+        return <EconomicHistory />;
+      case "PropertyMarketHistory":
+        return <PropertyMarketHistory />;
+      case "ResidentialInvestment":
+        return <ResidentialInvestment />;
+      default:
+        return <div>Select a visualization to display.</div>;
+    }
+  };
   return (
-    <div className="app">
-      <h1>Welcome to Summer Hackathon 2024!</h1>
-      <p>We've been waiting for you!</p>
-      <div className="post-container">
-        <section className="posts">
-          {!posts.length && <p>No posts yet, why don't your create new one!</p>}
-          {posts.map(post => {
-            return (
-              <Post key={post.id} post={post}/>
-            )
-          })}
-        </section>
-        <CreatePost onPost={fetchPosts}/>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/" component={Dashboard} />
+    //     {/* Add other routes as needed */}
+    //   </Routes>
+    // </Router>
+    <div className="dashboard-container">
+      <h1>Multi-Family Investment Market Study</h1>
+      <div className="dashboard-buttons">
+        <button onClick={() => setComp("EconomicHistory")}>
+          Economic History
+        </button>
+        <button onClick={() => setComp("ResidentialInvestment")}>
+          Residential Investment History
+        </button>
+        <button onClick={() => setComp("PropertyMarketHistory")}>
+          Property Market History
+        </button>
+      </div>
+      {/* <EconomicHistory /> */}
+      <div className="dashboard-content">
+        <Suspense fallback={<div>Loading...</div>}>
+          {renderComponent()}
+        </Suspense>
       </div>
     </div>
   );
-}
+};
 
 export default App;
