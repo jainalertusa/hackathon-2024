@@ -99,6 +99,9 @@ real-estate/
 •⁠  ⁠*Technology*: Python
 •⁠  ⁠*Port*: (not exposed)
 
+## Presentation Video 
+https://drive.google.com/file/d/10rkfOfxwzUUGGvOChSap9Ccv5dqn5PF5/view?usp=drive_link
+
 ## License
 
 This project is licensed under the MIT License.
