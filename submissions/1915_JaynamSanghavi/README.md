@@ -19,9 +19,25 @@ This project is a web application developed using React for the frontend and Nod
 
 ## Getting Started
 
-### Running the Backend (Node.js)
+### Cloning the repo
 
-1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd <repository-name>
+   ```
+### Starting backend
+   ```bash
+   cd property-backend
+   npm install
+   node app.js
+   https://localhost:8000
+   ```
+
+### Starting frontend
+   ```bash
+   cd property-frontend
+   npm install
+   npm start
+   https://localhost:3000
+   ```
+
+
