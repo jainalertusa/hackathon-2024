@@ -6,6 +6,7 @@ from .database import SessionLocal, engine
 from .models import Base, Property, Features
 from .utils import generate_pdf
 from . import schemas 
+from fastapi.middleware.cors import CORSMiddleware  # Import CORS middleware
 
 # APIRouter import to create routers
 from fastapi import APIRouter
@@ -70,6 +71,21 @@ async def get_property_pdf(apartment_id: str, db: Session = Depends(get_db)):
 
 # Create an instance of FastAPI
 app = FastAPI()
+
+# Define allowed origins for CORS
+origins = [
+    "http://localhost:3000",  # Your frontend origin
+    # Add more origins if needed
+]
+
+# Add CORS middleware to the FastAPI app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Allow only specified origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
 
 # Include the router instance in the app
 app.include_router(router, prefix="/api")  # You can change the prefix as needed
