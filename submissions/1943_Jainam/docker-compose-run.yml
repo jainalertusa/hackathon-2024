@@ -1,0 +1,16 @@
+version: "3.8.0"
+
+services:
+  ui:
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      context: ./blog-ui
+    # image: jainalertsummer2024/blog-ui:5400_jainalert
+    image: jainalertsummer2024/blog-ui:1943_Jainam
+    volumes:
+      - ./blog-ui:/src
+      - /src/node_modules
+    ports:
+      - $CLIENT_PORT:$CLIENT_PORT
