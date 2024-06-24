@@ -1,3 +1,13 @@
+Videos Demos
+
+https://www.youtube.com/watch?v=YWvXXlA7cW0
+
+https://www.youtube.com/watch?v=i0_9XdzwNpQ
+
+https://youtu.be/aipESBClqPg
+
+
+
 # Apartment Analytics Project
 
 This project consists of a web application that scrapes apartment data, processes it, and displays it via a frontend interface. The backend provides an API for fetching data and generating PDF reports with the property analytics data and a prediction if it is an investable property or not.
