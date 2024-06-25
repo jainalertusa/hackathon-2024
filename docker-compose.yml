@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    environment:
+      SQLALCHEMY_DATABASE_URL: mysql+pymysql://admin:shahsaumya@hackathon.c56geukiivra.us-east-1.rds.amazonaws.com:3306/hackathonDB
+
+  analytics:
+    build:
+      context: ./analytics
+      dockerfile: Dockerfile
+    depends_on:
+      - backend

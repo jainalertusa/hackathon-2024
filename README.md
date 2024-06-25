@@ -1,123 +1,118 @@
-# Summer Hackathon 2024 
+# Real Estate Web Application
 
-## Sample Project
+## Project Overview
 
-This sample project will help you set up your summer hackathon submissions!
+This project is a comprehensive real estate web application that includes a frontend for user interactions, a backend for managing data and business logic, an analytics module for market insights, and a scraper for fetching property data from various sources.
 
-Project contains
-1. Front End Application server
-2. Backend Server
-set up a development environment using Docker Compose for a full-stack JavaScript application, including:
+### Components
 
-- React Front End
-- Express API Backend
-- NGINX Reverse Proxy Server
-- MySQL Database
-- Admin Interface for MySQL
+1. **Frontend:** Built with React.js, it provides an interactive UI for users.
+2. **Backend:** Built with FastAPI, it handles data storage, user authentication, and business logic.
+3. **Analytics:** Analyzes real estate data to provide market insights.
+4. **Scraper:** Fetches property details from different websites and stores them in the database.
 
-Prerequisites
-Ensure you have the following installed on your machine:
+## Functionalities
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- Basic knowledge of Docker and Docker Compose
+- User Registration and Authentication
+- Viewing and Searching Property Listings
+- Real-time Market Analytics
+- Data Scraping from External Sources
 
-## Project Structure
-    .
-    project-root/
-    ├── api-server/
-    │ ├── Dockerfile
-    │ ├── package.json
-    │ ├── package-lock.json
-    │ └── .dockerignore
-    ├── blog-ui/
-    │ ├── Dockerfile
-    │ ├── package.json
-    │ ├── package-lock.json
-    │ └── .dockerignore
-    ├── nginx/
-    │ ├── default.conf
-    │ └── Dockerfile
-    ├── docker-compose.yml
-    └── .env
+## Running the Project Locally
 
-## Steps to Run Locally
+### Prerequisites
 
-1. Clone the Repository
+- Docker
 
-    ```
+### Setup Instructions
+
+1. **Clone the Repository:**
+    ```sh
     git clone <repository-url>
-    cd project-root
+    cd real-estate
     ```
 
-2. update .env file in the root directory with the following contents:
-   
-    ```
-    MYSQL_DATABASE=your_database_name
-    MYSQL_USER=your_user
-    MYSQL_PASSWORD=your_password
-    MYSQL_ROOT_PASSWORD=your_root_password
-    API_PORT=5050
-    CLIENT_PORT=3000
+2. **Build and Start the Docker Containers:**
+    ```sh
+    docker-compose up --build
     ```
 
-3. Build the Docker Images
-    ```
-    docker-compose -f docker-compose-push.yml build
+3. **Access the Application:**
+    - Frontend: `http://localhost:3000`
+    - Backend: `http://localhost:8000`
+    - Analytics: Check the relevant port specified in the `docker-compose.yml`
+
+### Running the Scraper Locally
+
+1. **Navigate to the Scraper Directory:**
+    ```sh
+    cd scraper
     ```
 
-4. Run the Docker Containers
-    ```
-    docker-compose -f docker-compose-run.yml up 
-    ```
-5. Access the Services
-
-- React Client: http://localhost:3000
-- Express API: http://localhost:5050
-- Proxied Client (via NGINX): http://localhost:8008
-- Adminer (MySQL Admin Interface): http://localhost:8080
-  - Server: db
-  - Username: MYSQL_USER
-  - Password: MYSQL_PASSWORD
-
-6. Shutting Down the Environment
-
-    ```
-    docker compose -f docker-compose-run.yml down
+2. **Install Dependencies:**
+    ```sh
+    pip install -r requirements.txt
     ```
 
-## Additional Notes
+3. **Run the Scraper:**
+    - Update `zipcodes.txt` with the relevant zip codes you want to scrape data for.
+    - Execute the scraper script:
+    ```sh
+    python crawlers/redfin_scraper.py
+    ```
 
-- Any changes made inside the /api-server and /blog-ui folders will be automatically updated due to the volume mounting and hot-reload setup.
-- Data persistence is handled through Docker volumes, ensuring that your MySQL data is preserved between container restarts.
+4. **Central Server:**
+    - Navigate to the `server` directory and run the central server:
+    ```sh
+    cd server
+    python central_server.py
+    ```
+
+### Project Structure
+
+real-estate/
+│
+├── analytics/
+│ ├── analytics.py
+│ ├── Dockerfile
+│ └── requirements.txt
+│
+├── backend/
+│ ├── app/
+│ │ ├── init.py
+│ │ ├── main.py
+│ │ ├── models.py
+│ │ ├── schemas.py
+│ │ └── utils.py
+│ ├── Dockerfile
+│ └── requirements.txt
+│
+├── frontend/
+│ ├── public/
+│ │ └── index.html
+│ ├── src/
+│ │ ├── components/
+│ │ │ ├── MyComponent.css
+│ │ │ └── MyComponent.jsx
+│ │ ├── App.jsx
+│ │ ├── index.css
+│ │ └── index.js
+│ ├── Dockerfile
+│ └── package.json
+│
+├── scraper/
+│ ├── crawlers/
+│ │ ├── mongodb_connection.py
+│ │ ├── redfin_scraper.py
+│ │ └── zipcodes.txt
+│ ├── server/
+│ │ ├── central_server.py
+│ │ └── Dockerfile.server
+│ └── requirements.txt
+│
+└── docker-compose.yml
 
 
-## Hackathon Solution Submission Steps:
-1. Create a account on docker hub with username and password
-    ```
-    https://hub.docker.com/
-    ```
-2. Update docker compose push file
-    ```
-    Update docker-compose-push.yml as under
-    <YOUR_GROUP_ID> -> Your group Id
-    <NAME> -> Enter your name
-    ```
-3. Push Images to Registry
-    ```
-    docker login
-    enter usename and password
-    docker-compose -f docker-compose-push.yml push
-    ```
-   
+## License
 
-# MOST IMPORTANT:  
-## Submit your solution to our git repo
-
-    1. checkout our master branch
-    2. create a new branch basing master -> should be named as <YOUR_GROUP_ID>_<NAME>
-    3. create a new folder under submissions -> <Your Group>(Check Sample Group folder)
-    4. add docker compose run(that can pull all the images required for your project to run)
-    5. add ppt based on sample group folder
-    6. add video of you explaining ppt and live demo
-    7. push it to our repo with your branch
-    8. create a PR to master from your branch
+This project is licensed under the MIT License
