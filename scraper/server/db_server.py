@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from pymongo.errors import DuplicateKeyError
-from scraper.crawlers.mongodb_connection import get_database
+from mongodb_connection import get_database
 
 app = Flask(__name__)
 
