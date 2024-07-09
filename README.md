@@ -1,107 +1,73 @@
-# Real Estate Project
+# Real Estate Web Application
 
-## Overview
+## Project Overview
 
-This project is a comprehensive real estate platform consisting of several microservices:
+This project is a comprehensive real estate web application that includes a frontend for user interactions, a backend for managing data and business logic, an analytics module for market insights, and a scraper for fetching property data from various sources.
 
-•⁠  ⁠*Frontend*: A React-based user interface.
-•⁠  ⁠*Backend*: A FastAPI-based service providing RESTful APIs.
-•⁠  ⁠*Analytics*: Data processing and analysis using Python.
-•⁠  ⁠*Scraper*: A web scraping service to collect real estate data.
+### Components
 
-## Project Structure
+1. **Frontend:** Built with React.js, it provides an interactive UI for users.
+2. **Backend:** Built with FastAPI, it handles data storage, user authentication, and business logic.
+3. **Analytics:** Analyzes real estate data to provide market insights.
+4. **Scraper:** Fetches property details from different websites and stores them in the database.
 
-real-estate/
-├── analytics
-│ ├── analytics.py
-│ ├── Dockerfile
-│ └── requirements.txt
-├── backend
-│ ├── app
-│ │ ├── init.py
-│ │ ├── database.py
-│ │ ├── main.py
-│ │ ├── models.py
-│ │ ├── schemas.py
-│ │ └── utils.py
-│ ├── Dockerfile
-│ └── requirements.txt
-├── frontend
-│ ├── public
-│ │ └── index.html
-│ ├── src
-│ │ ├── App.jsx
-│ │ ├── index.css
-│ │ ├── index.js
-│ │ └── components
-│ │ ├── MyComponent.css
-│ │ └── MyComponent.jsx
-│ ├── Dockerfile
-│ └── package.json
-├── scraper
-│ ├── central_server.py
-│ ├── Dockerfile.scraper
-│ ├── Dockerfile.server
-│ ├── docker-compose.yaml
-│ ├── mongodb_connection.py
-│ ├── requirements.txt
-│ ├── scraper.py
-│ └── zipcodes.txt
-├── docker-compose.yml
-└── README.md
+## Functionalities
 
+- User Registration and Authentication
+- Viewing and Searching Property Listings
+- Real-time Market Analytics
+- Data Scraping from External Sources
 
-## Getting Started
+## Running the Project Locally
 
 ### Prerequisites
 
-•⁠  ⁠Docker
-•⁠  ⁠Docker Compose
+- Docker
 
-### Running the Project
+### Setup Instructions
 
-1.⁠ ⁠Clone the repository:
-    ⁠ bash
-    git clone <repository-url>
+1. **Clone the Repository:**
+    ```sh
+    git clone https://github.com/jainalertusa/hackathon-2024.git
     cd real-estate
-     ⁠
+    ```
 
-2.⁠ ⁠Build and run the services:
-    ⁠ bash
+2. **Build and Start the Docker Containers:**
+    ```sh
     docker-compose up --build
-     ⁠
+    ```
 
-3.⁠ ⁠Access the frontend at ⁠ http://localhost:3000 ⁠ and backend at ⁠ http://localhost:8000 ⁠.
+3. **Access the Application:**
+    - Frontend: `http://localhost:3000`
+    - Backend: `http://localhost:8000`
+    - Analytics: Check the relevant port specified in the `docker-compose.yml`
 
-## Services
+### Running the Scraper Locally
 
-### Frontend
+1. **Navigate to the Scraper Directory:**
+    ```sh
+    cd scraper
+    ```
 
-•⁠  ⁠*Location*: ⁠ frontend/ ⁠
-•⁠  ⁠*Technology*: React
-•⁠  ⁠*Port*: 3000
+2. **Install Dependencies:**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-### Backend
+3. **Run the Scraper:**
+    - Update `zipcodes.txt` with the relevant zip codes you want to scrape data for.
+    - Execute the scraper script:
+    ```sh
+    python crawlers/redfin_scraper.py
+    ```
 
-•⁠  ⁠*Location*: ⁠ backend/ ⁠
-•⁠  ⁠*Technology*: FastAPI
-•⁠  ⁠*Port*: 8000
-
-### Analytics
-
-•⁠  ⁠*Location*: ⁠ analytics/ ⁠
-•⁠  ⁠*Technology*: Python
-•⁠  ⁠*Port*: (not exposed)
-
-### Scraper
-
-•⁠  ⁠*Location*: ⁠ scraper/ ⁠
-•⁠  ⁠*Technology*: Python
-•⁠  ⁠*Port*: (not exposed)
-
-## Presentation Video 
-https://drive.google.com/file/d/10rkfOfxwzUUGGvOChSap9Ccv5dqn5PF5/view?usp=drive_link
+4. **Central Server:**
+    - Navigate to the `server` directory and run the central server:
+    ```sh
+    cd server
+    python central_server.py
+    ```
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
