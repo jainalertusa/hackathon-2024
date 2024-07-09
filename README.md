@@ -1,4 +1,4 @@
-# Real Estate Web Application
+# Real Estate Finder Web Application
 
 ## Project Overview
 
