@@ -29,7 +29,6 @@ This project is a comprehensive real estate web application that includes a fron
 1. **Clone the Repository:**
     ```sh
     git clone https://github.com/jainalertusa/hackathon-2024.git
-    cd real-estate
     ```
 
 2. **Build and Start the Docker Containers:**
