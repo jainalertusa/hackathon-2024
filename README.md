@@ -13,7 +13,6 @@ This project is a comprehensive real estate web application that includes a fron
 
 ## Functionalities
 
-- User Registration and Authentication
 - Viewing and Searching Property Listings
 - Real-time Market Analytics
 - Data Scraping from External Sources
